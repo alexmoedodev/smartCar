@@ -104,7 +104,7 @@ const Header = () => {
                                     <span className='text-red-600'>{iconDefault.button.close}</span>
                                 </Button>
                             </div>
-                            <ul className='header__ul__moblie'>
+                            <ul className='header__ul__mobile'>
                                 {headerNavigation.map((nav)=> (
                             <li 
                             className='header__li'

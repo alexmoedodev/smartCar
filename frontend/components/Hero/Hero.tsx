@@ -31,14 +31,13 @@ const Hero = () => {
           Seu próximo carro começa aqui.
         </p>
 
-        {/* ------- BUTTON VIEW MORE ------ */}
+       
         <Button
           type='button'
-          ariaLabel='Ver mais detalhes.'
-          title='Ver mais detalhes.'
+          title='Click-me e explore mais carros.'
           variant='primary'
         >
-          Ver mais detalhes
+          Explorar Carros
         </Button>
 
       </div>
@@ -58,9 +57,6 @@ const Hero = () => {
           className='object-contain z-0'
         />
       </div>
-
-
-
     </div>
   )
 }

@@ -14,6 +14,10 @@ interface ButtonProps {
  * @param onClick - Função executada quando o botão é acionado.
  * @param type - Define o comportamento do botão dentro de um formulário.
  * @param variant - Define a variação visual do botão.
+ * 
+ * ATENÇÃO:
+ * Alterações realizadas neste arquivo podem afetar todos os componentes que
+ * utilizam.
  *
  * @returns Um elemento HTML <button> estilizado conforme a variante selecionada.
  */
