@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Button from '../ux/Button'
 
 /**
- * Componente responsável pela estrutura e composição visual
+ * Componente responsável pela estrutura visual
  * da seção Hero da página.
  *
  * As classes CSS utilizadas neste componente são definidas
