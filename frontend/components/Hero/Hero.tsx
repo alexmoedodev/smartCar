@@ -2,13 +2,20 @@ import Image from 'next/image'
 import Button from '../ux/Button'
 
 /**
- * Componente responsável por layout do Hero da página.
- * @param hero - class css está no arquivo global.css responsavel pela style do layout
- * @param hero__content - class css esta no arquivo glogal.css 
- * @param hero__title
- * @param hero__description
- * @param hero__image
- * 
+ * Componente responsável pela estrutura e composição visual
+ * da seção Hero da página.
+ *
+ * As classes CSS utilizadas neste componente são definidas
+ * no arquivo global `globals.css` e são responsáveis pela
+ * estilização e pelo layout de cada elemento.
+ *
+ * Classes utilizadas:
+ *
+ * - `hero` — define o layout principal da seção Hero.
+ * - `hero__content` — organiza o conteúdo textual da seção.
+ * - `hero__title` — define a estilização do título principal.
+ * - `hero__description` — define a estilização da descrição.
+ * - `hero__image` — define o layout e a estilização da imagem.
  */
 const Hero = () => {
   return (
