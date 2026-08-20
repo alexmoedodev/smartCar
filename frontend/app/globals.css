@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* ========================================
+   LIGHT THEME
+======================================== */
+:root {
+    --background: #ffffff;
+    --foreground: #030712;
+    --black: oklch(13% 0.028 261.692)
+    --gray: oklch(37.3% 0.034 259.733);
+    --primary: oklch(54.6% 0.245 262.881);
+    --white: #ffffff
+}
+
+
+/* ========================================
+   DARK THEME
+======================================== */ 
+.dark {
+    --background: #030712;
+    --foreground: #ffffff;
+    --gray: oklch(55.1% 0.027 264.364);
+    --black: #ffffff;
+    --primary: oklch(54.6% 0.245 262.881);
+    --white: #ffffff
+  
+}
+
+
+/* ========================================
+ THEME
+======================================== */
+@theme {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-gray: var(--gray);
+    --color-black: var(--black);
+    --color-primary: var(--primary);
+}
+
+body {
+    background: var(--background)
+}
+
+/* START Styles HERO */
+.hero{
+    @apply relative flex flex-col md:flex-row items-center  w-full max-w-6xl mx-auto h-150 px-4
+}
+.hero__content{
+    @apply flex flex-col items-center justify-center text-center p-8 gap-4 md:w-1/2
+}
+.hero__title {
+    @apply text-3xl md:text-5xl font-bold text-black
+}
+.hero__description {
+    @apply text-gray text-lg 
+}
+.hero__image {
+    @apply relative w-full md:w-2/3 h-full
+}
+/* END Styles HERO */
+
+
+/* START Styles BUTTONS */
+.button__primary{
+    @apply bg-primary text-neutral-100 hover:bg-primary/90
+}
