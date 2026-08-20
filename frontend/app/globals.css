@@ -1,67 +1,161 @@
 @import "tailwindcss";
 
 /* ========================================
+   DESIGN TOKENS
+======================================== */
+
+/**
+ * Variáveis globais de cores utilizadas pela aplicação.
+ *
+ * As variáveis são utilizadas como base para o sistema de
+ * cores da interface e podem ser sobrescritas de acordo
+ * com o tema ativo.
+ *
+ * Principais tokens:
+ *
+ * --background  → Cor de fundo principal.
+ * --foreground  → Cor principal dos textos.
+ * --black       → Cor utilizada para elementos escuros.
+ * --gray        → Cor utilizada para textos secundários.
+ * --primary     → Cor principal da identidade visual.
+ * --white       → Cor branca.
+ * --danger      → Cor utilizada para ações ou estados de perigo.
+ */
+
+/* ========================================
    LIGHT THEME
 ======================================== */
+
 :root {
     --background: #ffffff;
     --foreground: #030712;
-    --black: oklch(13% 0.028 261.692)
+    --black: oklch(13% 0.028 261.692);
     --gray: oklch(37.3% 0.034 259.733);
     --primary: oklch(54.6% 0.245 262.881);
-    --white: #ffffff
+    --white: #ffffff;
+    --danger: oklch(57.7% 0.245 27.325);
 }
-
 
 /* ========================================
    DARK THEME
-======================================== */ 
+======================================== */
+
+/**
+ * Sobrescreve os tokens de cores quando o tema escuro
+ * é aplicado ao elemento raiz da aplicação.
+ */
+
 .dark {
     --background: #030712;
     --foreground: #ffffff;
     --gray: oklch(55.1% 0.027 264.364);
     --black: #ffffff;
     --primary: oklch(54.6% 0.245 262.881);
-    --white: #ffffff
-  
+    --white: #ffffff;
+    --danger: oklch(57.7% 0.245 27.325);
 }
 
-
 /* ========================================
- THEME
+   TAILWIND THEME
 ======================================== */
+
+/**
+ * Expõe os tokens de cores como variáveis do tema
+ * do Tailwind CSS, permitindo utilizá-los através
+ * das classes utilitárias da aplicação.
+ */
+
 @theme {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-gray: var(--gray);
     --color-black: var(--black);
     --color-primary: var(--primary);
+    --color-danger: var(--danger);
 }
 
 body {
-    background: var(--background)
+    background: var(--background);
 }
 
-/* START Styles HERO */
-.hero{
-    @apply relative flex flex-col md:flex-row items-center  w-full max-w-6xl mx-auto h-150 px-4
+/* ========================================
+   HEADER
+======================================== */
+
+/**
+ * Estilos responsáveis pela estrutura e comportamento
+ * visual do Header da aplicação.
+ */
+
+.header {
+    @apply fixed bg-background flex items-center justify-center mx-auto w-full h-18 shadow-neutral-200 shadow z-50;
 }
-.hero__content{
-    @apply flex flex-col items-center justify-center text-center p-8 gap-4 md:w-1/2
+
+.header__content {
+    @apply relative flex items-center justify-between w-full max-w-6xl h-full px-6;
 }
+
+.header__nav__desktop {
+    @apply hidden md:flex;
+}
+
+.header__ul__desktop {
+    @apply flex items-center justify-center gap-2;
+}
+
+.header__li {
+    @apply items-center px-2 py-1 rounded-md cursor-pointer hover:bg-primary hover:text-white transition-all duration-300;
+}
+
+.header__ul__mobile {
+    @apply flex flex-col gap-4 p-4;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+/**
+ * Estilos responsáveis pela estrutura e composição
+ * visual da seção Hero da aplicação.
+ */
+
+.hero {
+    @apply relative flex flex-col mt-20 md:mt-0 md:flex-row items-center w-full max-w-6xl mx-auto h-150 px-4;
+}
+
+.hero__content {
+    @apply flex flex-col items-center justify-center text-center p-8 gap-4 md:w-1/2;
+}
+
 .hero__title {
-    @apply text-3xl md:text-5xl font-bold text-black
+    @apply text-3xl md:text-5xl font-bold text-black;
 }
+
 .hero__description {
-    @apply text-gray text-lg 
+    @apply text-gray text-lg;
 }
+
 .hero__image {
-    @apply relative w-full md:w-2/3 h-full
+    @apply relative w-full md:w-2/3 h-full;
 }
-/* END Styles HERO */
 
+/* ========================================
+   BUTTONS
+======================================== */
 
-/* START Styles BUTTONS */
-.button__primary{
-    @apply bg-primary text-neutral-100 hover:bg-primary/90
+/**
+ * Variantes visuais dos botões da aplicação.
+ *
+ * Cada classe representa uma variante definida pelo
+ * componente Button e utiliza os tokens de cores
+ * estabelecidos no tema.
+ */
+
+.button__primary {
+    @apply bg-primary text-neutral-100 hover:bg-primary/90 border-0;
+}
+
+.button__outline {
+    @apply bg-transparent text-black;
 }
