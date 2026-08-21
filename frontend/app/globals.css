@@ -140,6 +140,44 @@ body {
     @apply relative w-full md:w-2/3 h-full;
 }
 
+
+/* ========================================
+  FOOTER
+======================================== */
+
+/**
+ * Estilos responsáveis pela estrutura e composição
+ * visual da seção footer da aplicação.
+ */
+
+ .footer {
+    @apply flex flex-col p-8 w-full mx-auto
+ }
+ .footer__content {
+    @apply flex flex-col md:flex-row w-full max-w-6xl mx-auto gap-4 md:gap-8 px-6 
+ }
+.footer__logoTipo{
+    @apply flex flex-col text-black text-sm md:w-1/3
+}
+.footer__navegation{
+    @apply flex flex-col gap-8 sm:flex-row sm:justify-between  p-4 mx-auto w-full md:max-w-2/3
+}
+
+.footer__ul{
+    @apply flex flex-col gap-4
+}
+.footer__span {
+    @apply font-bold text-black
+}
+.footer__link{
+    @apply flex items-center justify-start gap-2 text-black text-sm
+}
+
+.footer__copy{
+    @apply flex flex-wrap items-center justify-center text-center mt-18 mx-auto text-xs md:text-sm text-gray gap-1
+}
+
+
 /* ========================================
    BUTTONS
 ======================================== */
