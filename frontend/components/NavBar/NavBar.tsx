@@ -5,14 +5,14 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 
 // Component UX
-import Button from '../ux/Button'
+import Button from "@/components/ux/Button"
 
 // Constants 
 import iconDefault from '@/constants/icons'
 
 // Component Layout
-import headerNavigation from './HeaderNavegation'
-import ImageLogo from '../LogoTipo/ImageLogo'
+import headerNavigation from '@/components/NavBar/headerNavegation'
+import ImageLogo from '@/components/LogoTipo/ImageLogo'
 
 /**
  * Componente responsável pela estrutura e navegação principal
@@ -46,22 +46,37 @@ const NavBar = () => {
         setShowMenuNav((prev) => !prev)
     }
 
+    /**
+     * Responsável por renderizar o icon padrao definido no 
+     * arquivo `iconDefault.tsx`.
+     * 
+     * Necessário armazenar um uma variavel para poder tranformar um 
+     * um elemento JSX - <Icon />, assim podemos atribuir tamanhos e cores diferentes ao longo
+     * da aplicação reutilizando e mantendo a consistencia e escalabilidade.
+     */
+    const IconMenu = iconDefault.button.menu
+    const IconClose = iconDefault.button.close
+
     return (
         <header className='header'>
             <div className='header__content'>
                 {/* ------- IMAGE LOGOTIPO ------- */}
                 <ImageLogo />
-                
+
                 {/* ------- NAVEGATION DESKTOP ------- */}
                 <nav className='header__nav__desktop'>
                     <ul className='header__ul__desktop'>
-                        {headerNavigation.map((nav) => (
-                            <li
-                                className='header__li'
-                                key={nav.label}>
-                                <Link href={"#"} className='flex items-center gap-2'>{nav.icon}{nav.label}</Link>
-                            </li>
-                        ))}
+                        {headerNavigation.map((nav) => {
+                            const Icon = nav.icon
+                            return (
+
+                                <li
+                                    className='header__li'
+                                    key={nav.label}>
+                                    <Link href={"#"} className='flex items-center gap-2'><Icon size={nav.sizeIcon} />{nav.label}</Link>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </nav>
 
@@ -75,7 +90,7 @@ const NavBar = () => {
                         aria-label="Abrir menu de navegação."
                         onClick={handleToggleNavigation}
                     >
-                        {iconDefault.button.menu}
+                        <IconMenu />
                     </Button>
 
                     {/* ----- Menu lateral de navegação MOBLIE ------- */}
@@ -85,7 +100,6 @@ const NavBar = () => {
                             `}
                         onClick={handleToggleNavigation}
                     >
-
                         <nav
                             onClick={(e) => e.stopPropagation()}
                             className={`bg-neutral-100 w-50 h-full absolute top-0 right-0 flex flex-col gap-4 transform transition-transform duration-500 ease-in-out
@@ -100,20 +114,24 @@ const NavBar = () => {
                                     aria-label="Fechar menu de navegação."
                                     onClick={handleToggleNavigation}
                                 >
-                                    <span className='text-red-600'>{iconDefault.button.close}</span>
+                                    <span className='text-red-600'>
+                                        <IconClose />
+                                    </span>
                                 </Button>
                             </div>
                             <ul className='header__ul__mobile'>
-                                {headerNavigation.map((nav) => (
-                                    <li
-                                        className='header__li'
-                                        key={nav.label}>
-                                        <Link href={"#"} className='flex items-center gap-2'>{nav.icon} - {nav.label}</Link>
-                                    </li>
-                                ))}
+                                {headerNavigation.map((nav) => {
+                                    const Icon = nav.icon
+                                    return (
+                                        <li
+                                            className='header__li'
+                                            key={nav.label}>
+                                            <Link href={"#"} className='flex items-center gap-2'><Icon size={nav.sizeIcon} /> - {nav.label}</Link>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </nav>
-
                     </div>
                 </div>
             </div>

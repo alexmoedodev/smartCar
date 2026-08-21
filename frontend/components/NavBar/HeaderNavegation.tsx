@@ -14,26 +14,32 @@ import iconDefault from "@/constants/icons"
  * `title` - Texto exibido como tooltip ao passar o cursor sobre o link.
  * `icon` - Ícone correspondente ao item de navegação.
  */
+
+const sizeIconDefault:number = 20
 const headerNavigation = [
     {
         label: "Veiculos",
         title: "Explore nossos veicúlos.",
-        icon: iconDefault.vehicle.car
+        icon: iconDefault.vehicle.car,
+        sizeIcon: sizeIconDefault,
     },
     {
         label: "Contatos",
         title: "Nossos numero de contatos.",
-        icon: iconDefault.contact.phone
+        icon: iconDefault.contact.phone,
+        sizeIcon: sizeIconDefault,
     },
     {
         label: "Localização",
         title: "Nossa localização.",
-        icon: iconDefault.others.map
+        icon: iconDefault.others.map,
+        sizeIcon: sizeIconDefault,
     },
     {
         label: "Sobre-nós",
         title: "Click e saiba mais sobre nós",
-        icon: iconDefault.others.about
+        icon: iconDefault.others.about,
+        sizeIcon: sizeIconDefault,
     },
 ]
 

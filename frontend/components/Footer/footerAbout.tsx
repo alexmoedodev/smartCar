@@ -1,4 +1,5 @@
 /**
+ * SOBRE-NÓS
  * Configuração dos itens de navegação do Footer - Sobre-nós.
  * 
  * Centraliza as informação utilizadas para renderizar os links de navegação facilitando a adição

@@ -1,14 +1,27 @@
 import {
     BookOpenCheck,
+    Building2,
+    Calendar,
     Car,
+    Globe,
     Home,
     Info,
     Mail,
     MapPinCheckInside,
     Menu,
     PhoneCall,
+    Timer,
     X
 } from "lucide-react"
+
+/**
+ * SVG - Icones Redes sociais 
+ */
+import Instagram from "@/constants/icons/socialMedia/instagram.svg"
+import Facebook from "@/constants/icons/socialMedia/facebook.svg"
+import X_SocialMedia from "@/constants/icons/socialMedia/x.svg"
+import TikTok from "@/constants/icons/socialMedia/tiktok.svg"
+import WhatsApp from "@/constants/icons/socialMedia/whatsapp.svg"
 
 /**
  * Centraliza os ícones utilizados pela aplicação.
@@ -29,22 +42,15 @@ import {
  * ícone diretamente do lucide-react em vez de alterar a configuração global.
  */
 
-/**
- * Tamanho padrão utilizado pelos ícones da aplicação.
- *
- * Centralizar esse valor permite alterar o tamanho padrão dos ícones
- * sem precisar modificar cada utilização individualmente.
- */
-const sizeDefaultIcon: number = 20
 
 const iconDefault = {
-
     /**
      * Ícones utilizados principalmente na navegação lateral
      * (sidebar) da aplicação.
      */
     sidebar: {
-        home: <Home size={sizeDefaultIcon} />,
+        home: Home ,
+        company: Building2 
     },
 
     /**
@@ -57,15 +63,15 @@ const iconDefault = {
      * Ícones relacionados às informações de contato.
      */
     contact: {
-        phone: <PhoneCall size={sizeDefaultIcon} />,
-        email: <Mail size={sizeDefaultIcon} />,
+        phone: PhoneCall ,
+        email: Mail,
     },
 
     /**
      * Ícones relacionados aos veículos.
      */
     vehicle: {
-        car: <Car size={sizeDefaultIcon} />,
+        car: Car ,
     },
 
     /**
@@ -73,8 +79,8 @@ const iconDefault = {
      * e elementos que possuem comportamento de ação.
      */
     button: {
-        menu: <Menu size={sizeDefaultIcon} />,
-        close: <X size={sizeDefaultIcon} />,
+        menu:Menu ,
+        close: X,
     },
 
     /**
@@ -82,10 +88,27 @@ const iconDefault = {
      * especificamente a outro grupo.
      */
     others: {
-        info: <Info size={sizeDefaultIcon} />,
-        map: <MapPinCheckInside size={sizeDefaultIcon} />,
-        about: <BookOpenCheck size={sizeDefaultIcon} />,
+        info: Info,
+        map: MapPinCheckInside ,
+        about: BookOpenCheck ,
+        timer: Timer,
+        calendar: Calendar ,
+        globe: Globe,
     },
+
+
+     /**
+      * Icons em SVG 
+      * Necessário ser componente imagem para renderização.
+      */
+    socialMedia: {
+        instagran: Instagram, 
+        faceboock: Facebook,
+        whatsApp: WhatsApp,
+        x: X_SocialMedia,
+        tiktok: TikTok,
+        
+    }
 }
 
 export default iconDefault
