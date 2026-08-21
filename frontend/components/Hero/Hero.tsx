@@ -31,7 +31,7 @@ const Hero = () => {
           Seu próximo carro começa aqui.
         </p>
 
-       
+
         <Button
           type='button'
           title='Click-me e explore mais carros.'
@@ -48,12 +48,16 @@ const Hero = () => {
           src={"/hero.png"}
           alt='hero'
           fill
+          priority
+          quality={100}
           className='object-contain z-10'
         />
         <Image
           src={"/hero-bg.png"}
           alt='hero'
           fill
+          priority
+          quality={100}
           className='object-contain z-0'
         />
       </div>

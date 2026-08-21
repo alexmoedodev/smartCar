@@ -1,11 +1,11 @@
-import { Header } from '@/components/Header'
-import { Hero } from '@/components/Hero'
 import React from 'react'
+import  NavBar  from '@/components/NavBar/NavBar'
+import  Hero  from '@/components/Hero/Hero'
 
 function Home() {
   return (
     <>
-      <Header />
+      <NavBar />
       <Hero />
     </>
   )

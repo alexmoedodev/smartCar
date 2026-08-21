@@ -32,7 +32,7 @@ import Link from 'next/link'
  * - `header__ul__moblie` — estiliza a lista de navegação mobile.
  * - `header__li` — define o estilo dos itens de navegação.
  */
-const Header = () => {
+const NavBar = () => {
 
     const [showMenuNav, setShowMenuNav] = useState<boolean>(false)
     function handleToggleNavigation() {
@@ -44,22 +44,26 @@ const Header = () => {
             <div className='header__content'>
                 {/* ------- IMAGE LOGOTIPO ------- */}
                 <div className='relative w-20 h-full'>
-                    <Image
-                        src={"/logo.png"}
-                        alt='Imagem icone do logotipo.'
-                        title='Logotipo'
-                        fill
-                        className='object-contain cursor-pointer'
-                    />
+                    <Link href={"/"}>
+                        <Image
+                            src={"/logo.png"}
+                            alt='Imagem icone do logotipo.'
+                            title='Logotipo'
+                            fill
+                            priority
+                            quality={100}
+                            className='object-contain cursor-pointer'
+                        />
+                    </Link>
                 </div>
 
                 {/* ------- NAVEGATION DESKTOP ------- */}
                 <nav className='header__nav__desktop'>
                     <ul className='header__ul__desktop'>
-                        {headerNavigation.map((nav)=> (
-                            <li 
-                            className='header__li'
-                            key={nav.label}>
+                        {headerNavigation.map((nav) => (
+                            <li
+                                className='header__li'
+                                key={nav.label}>
                                 <Link href={"#"} className='flex items-center gap-2'>{nav.icon}{nav.label}</Link>
                             </li>
                         ))}
@@ -84,14 +88,14 @@ const Header = () => {
                         className={`fixed inset-0 z-20 bg-neutral-950/90 transition-opacity duration-500
                             ${showMenuNav ? "opacity-100" : "opacity-0 pointer-events-none"}
                             `}
-                            onClick={handleToggleNavigation}
-                            >
+                        onClick={handleToggleNavigation}
+                    >
 
-                        <nav 
-                        onClick={(e)=> e.stopPropagation()}
-                        className={`bg-neutral-100 w-50 h-full absolute top-0 right-0 flex flex-col gap-4 transform transition-transform duration-500 ease-in-out
+                        <nav
+                            onClick={(e) => e.stopPropagation()}
+                            className={`bg-neutral-100 w-50 h-full absolute top-0 right-0 flex flex-col gap-4 transform transition-transform duration-500 ease-in-out
                                ${showMenuNav ? "translate-x-0" : "translate-x-full"
-                            }
+                                }
                                 `}>
                             <div className='flex border-b border-gray-300 p-2'>
                                 <Button
@@ -105,13 +109,13 @@ const Header = () => {
                                 </Button>
                             </div>
                             <ul className='header__ul__mobile'>
-                                {headerNavigation.map((nav)=> (
-                            <li 
-                            className='header__li'
-                            key={nav.label}>
-                                <Link href={"#"} className='flex items-center gap-2'>{nav.icon} - {nav.label}</Link>
-                            </li>
-                        ))}
+                                {headerNavigation.map((nav) => (
+                                    <li
+                                        className='header__li'
+                                        key={nav.label}>
+                                        <Link href={"#"} className='flex items-center gap-2'>{nav.icon} - {nav.label}</Link>
+                                    </li>
+                                ))}
                             </ul>
                         </nav>
 
@@ -122,4 +126,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default NavBar
