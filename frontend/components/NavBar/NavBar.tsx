@@ -1,11 +1,18 @@
 "use client"
 
-import Image from 'next/image'
+// React - Next
 import React, { useState } from 'react'
-import Button from '../ux/Button'
-import iconDefault from '@/constants/icons'
-import headerNavigation from './Navegation'
 import Link from 'next/link'
+
+// Component UX
+import Button from '../ux/Button'
+
+// Constants 
+import iconDefault from '@/constants/icons'
+
+// Component Layout
+import headerNavigation from './HeaderNavegation'
+import ImageLogo from '../LogoTipo/ImageLogo'
 
 /**
  * Componente responsável pela estrutura e navegação principal
@@ -43,20 +50,8 @@ const NavBar = () => {
         <header className='header'>
             <div className='header__content'>
                 {/* ------- IMAGE LOGOTIPO ------- */}
-                <div className='relative w-20 h-full'>
-                    <Link href={"/"}>
-                        <Image
-                            src={"/logo.png"}
-                            alt='Imagem icone do logotipo.'
-                            title='Logotipo'
-                            fill
-                            priority
-                            quality={100}
-                            className='object-contain cursor-pointer'
-                        />
-                    </Link>
-                </div>
-
+                <ImageLogo />
+                
                 {/* ------- NAVEGATION DESKTOP ------- */}
                 <nav className='header__nav__desktop'>
                     <ul className='header__ul__desktop'>

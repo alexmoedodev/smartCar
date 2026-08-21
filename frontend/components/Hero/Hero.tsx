@@ -49,16 +49,18 @@ const Hero = () => {
           alt='hero'
           fill
           priority
-          quality={100}
-          className='object-contain z-10'
+          quality={75}
+          sizes='100vh'
+          className='object-contain z-10 '
         />
         <Image
           src={"/hero-bg.png"}
           alt='hero'
           fill
           priority
-          quality={100}
-          className='object-contain z-0'
+          quality={75}
+          sizes='100vh'
+          className='object-contain z-0 '
         />
       </div>
     </div>
