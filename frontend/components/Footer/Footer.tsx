@@ -66,7 +66,7 @@ const Footer = () => {
                         </ul>
                     </nav>
 
-                    {/* Links das redes sociais. */}
+                    {/* Links das redes sociais.*/}
                     <nav>
                         <ul className="footer__ul">
                             <span className="footer__span">Redes Sociais</span>
