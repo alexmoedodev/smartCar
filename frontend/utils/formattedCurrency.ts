@@ -1,3 +1,8 @@
+/**
+ * Função que formata o valor monetário.
+ *  
+ * @param value - Valor 
+ */
 const formattedCurrency = (value: number) => {
     const currency = new Number(value).toLocaleString("pt-BR", {
         currency: "BRL",
