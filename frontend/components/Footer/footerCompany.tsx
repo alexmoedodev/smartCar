@@ -1,4 +1,4 @@
-import iconDefault from "@/constants/icons";
+import uiIcons from "@/constants/uiIcons";
 
 /**
  * EMPRESA
@@ -27,21 +27,21 @@ const footerCompany = [
         label: "Site",
         title: "Visite nosso Site.",
         href: "#",
-        icon: iconDefault.others.globe,
+        icon: uiIcons.others.globe,
         iconSize: iconSizeDefault
     },
      {
         label: "Eventos",
         title: "Saiba mais sobre os nosso evento.",
         href: "#",
-        icon: iconDefault.others.calendar,
+        icon: uiIcons.others.calendar,
         iconSize: iconSizeDefault
     },
      {
         label: "E-mail",
         title: "Envie nos um e-mail caso necessário.",
         href: "#",
-        icon: iconDefault.contact.email,
+        icon: uiIcons.contact.email,
         iconSize: iconSizeDefault
     },
    
