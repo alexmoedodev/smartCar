@@ -8,7 +8,7 @@ import Link from 'next/link'
 import Button from "@/components/ux/Button"
 
 // Constants 
-import iconDefault from '@/constants/icons'
+import uiIcons from '@/constants/uiIcons'
 
 // Component Layout
 import headerNavigation from '@/components/NavBar/headerNavegation'
@@ -48,14 +48,14 @@ const NavBar = () => {
 
     /**
      * Responsável por renderizar o icon padrao definido no 
-     * arquivo `iconDefault.tsx`.
+     * arquivo `uiIcons.tsx`.
      * 
      * Necessário armazenar um uma variavel para poder tranformar um 
      * um elemento JSX - <Icon />, assim podemos atribuir tamanhos e cores diferentes ao longo
      * da aplicação reutilizando e mantendo a consistencia e escalabilidade.
      */
-    const IconMenu = iconDefault.button.menu
-    const IconClose = iconDefault.button.close
+    const IconMenu = uiIcons.button.menu
+    const IconClose = uiIcons.button.close
 
     return (
         <header className='header'>
