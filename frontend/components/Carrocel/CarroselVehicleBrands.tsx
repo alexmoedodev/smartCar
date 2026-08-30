@@ -18,7 +18,7 @@ const CarroselVehicleBrands = () => {
         <section className="my-8 w-full bg-gray-50 py-8 overflow-hidden ">
 
             {/* Conteudo responsavel pela animação do carrosel */}
-            <div className="flex w-max gap-12 animate-brands-scroll overflow-hidden">
+            <div className="flex w-max gap-6 sm:gap-12 animate-brands-scroll overflow-hidden">
 
                 {vehicleBrandLogos.map((brand) => (
                     <div
