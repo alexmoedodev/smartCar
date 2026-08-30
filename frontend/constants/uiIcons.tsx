@@ -1,3 +1,7 @@
+
+/**
+ * Import icon React-lucide
+ */
 import {
     BookOpenCheck,
     Building2,
@@ -17,11 +21,14 @@ import {
 /**
  * SVG - Icones Redes sociais 
  */
-import Instagram from "@/constants/icons/socialMedia/instagram.svg"
-import Facebook from "@/constants/icons/socialMedia/facebook.svg"
-import X_SocialMedia from "@/constants/icons/socialMedia/x.svg"
-import TikTok from "@/constants/icons/socialMedia/tiktok.svg"
-import WhatsApp from "@/constants/icons/socialMedia/whatsapp.svg"
+import {
+    Instagram,
+    Facebook,
+    WhatsApp,
+    X_SocialMedia,
+    TikTok,
+    YouTube
+} from "@/assets/social-media-icons"
 
 /**
  * Centraliza os ícones utilizados pela aplicação.
@@ -43,14 +50,14 @@ import WhatsApp from "@/constants/icons/socialMedia/whatsapp.svg"
  */
 
 
-const iconDefault = {
+const uiIcons = {
     /**
      * Ícones utilizados principalmente na navegação lateral
      * (sidebar) da aplicação.
      */
     sidebar: {
-        home: Home ,
-        company: Building2 
+        home: Home,
+        company: Building2
     },
 
     /**
@@ -63,7 +70,7 @@ const iconDefault = {
      * Ícones relacionados às informações de contato.
      */
     contact: {
-        phone: PhoneCall ,
+        phone: PhoneCall,
         email: Mail,
     },
 
@@ -71,7 +78,7 @@ const iconDefault = {
      * Ícones relacionados aos veículos.
      */
     vehicle: {
-        car: Car ,
+        car: Car,
     },
 
     /**
@@ -79,7 +86,7 @@ const iconDefault = {
      * e elementos que possuem comportamento de ação.
      */
     button: {
-        menu:Menu ,
+        menu: Menu,
         close: X,
     },
 
@@ -89,26 +96,27 @@ const iconDefault = {
      */
     others: {
         info: Info,
-        map: MapPinCheckInside ,
-        about: BookOpenCheck ,
+        map: MapPinCheckInside,
+        about: BookOpenCheck,
         timer: Timer,
-        calendar: Calendar ,
+        calendar: Calendar,
         globe: Globe,
     },
 
 
-     /**
-      * Icons em SVG 
-      * Necessário ser componente imagem para renderização.
-      */
+    /**
+     * Icons em SVG 
+     * Necessário ser componente imagem para renderização.
+     */
     socialMedia: {
-        instagran: Instagram, 
+        instagran: Instagram,
         faceboock: Facebook,
         whatsApp: WhatsApp,
         x: X_SocialMedia,
         tiktok: TikTok,
-        
+        youtube: YouTube,
+
     }
 }
 
-export default iconDefault
+export default uiIcons
