@@ -1,4 +1,4 @@
-import iconDefault from "@/constants/icons"
+import uiIcons from "@/constants/uiIcons"
 /**
  * REDES SOCIAS 
  * Configuração dos itens de navegação exibidos no Footer.
@@ -22,43 +22,51 @@ import iconDefault from "@/constants/icons"
  */
 const iconSizeDefault: number = 15
 
-const footerSocialMedia = [
+const footerSocialMedia = [  
+    {
+        label: "YouTube",
+        title: "Redes do sociais YouTube.",
+        href: "#",
+        icon: uiIcons.socialMedia.youtube,
+        iconSize: iconSizeDefault
+    },
     {
         label: "Instagran",
         title: "Redes do sociais Instagran.",
         href: "#",
-        icon: iconDefault.socialMedia.instagran,
+        icon: uiIcons.socialMedia.instagran,
         iconSize: iconSizeDefault
     },
     {
         label: "Faceboock",
         title: "Redes do sociais Faceboock.",
         href: "#",
-        icon: iconDefault.socialMedia.faceboock,
+        icon: uiIcons.socialMedia.faceboock,
         iconSize: iconSizeDefault
     },
     {
         label: "WhatsApp",
         title: "Redes do sociais WhatsApp.",
         href: "#",
-        icon: iconDefault.socialMedia.whatsApp,
+        icon: uiIcons.socialMedia.whatsApp,
         iconSize: iconSizeDefault
     },
     {
         label: "TikTok",
         title: "Redes do sociais TikTok.",
         href: "#",
-        icon: iconDefault.socialMedia.tiktok,
+        icon: uiIcons.socialMedia.tiktok,
         iconSize: iconSizeDefault
     },
+    
     {
         label: "X",
         title: "Redes do sociais X.",
         href: "#",
-        icon: iconDefault.socialMedia.x,
+        icon: uiIcons.socialMedia.x,
         iconSize: iconSizeDefault
     },
-
+  
 ]
 
 export default footerSocialMedia
