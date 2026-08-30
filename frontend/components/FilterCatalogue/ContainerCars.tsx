@@ -1,6 +1,6 @@
 import React from 'react'
 import CardCars from '@/components/Cards/CardCars'
-import cars from '@/components/Map/cars'
+import vehicles from '@/mocks/vehicles'
 
 
 /**
@@ -14,7 +14,7 @@ const ContainerCars = () => {
     return (
         <section className='flex items-center justify-center w-full my-6 px-6'>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl gap-y-6 w-full justify-items-center gap-12'>
-                {cars.map((car) => (
+                {vehicles.map((car) => (
                     <CardCars
                         key={car.id}
                         car={{
