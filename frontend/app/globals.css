@@ -34,6 +34,7 @@
     --primary: oklch(54.6% 0.245 262.881);
     --white: #ffffff;
     --danger: oklch(57.7% 0.245 27.325);
+    --warning:
 }
 
 /* ========================================
@@ -76,6 +77,7 @@
 
 body {
     background: var(--background);
+    
 }
 
 /* ========================================
@@ -142,6 +144,37 @@ body {
 
 
 /* ========================================
+  SESION - CATALOGUE CARS
+======================================== */
+.card__car{
+    @apply relative flex flex-col items-center justify-center bg-primary/10 w-full md:w-60 lg:w-60 h-70 lg:h-75 rounded-lg p-4 cursor-pointer transition-transform duration-200 hover:scale-101
+}
+.card__car__header{
+    @apply absolute top-2 left-2 right-2
+}
+
+.card__car__footer{
+    @apply flex flex-col w-full
+}
+
+.card__car__ul {
+    @apply flex flex-col w-full bg-white py-1 px-2 rounded-md gap-2
+}
+.card__car__li{
+    @apply flex items-center justify-between
+}
+
+.card__car__details{
+    @apply flex items-center gap-1 text-gray  text-sm
+}
+
+
+
+
+
+
+
+/* ========================================
   FOOTER
 ======================================== */
 
@@ -196,4 +229,34 @@ body {
 
 .button__outline {
     @apply bg-transparent text-black;
+}
+
+/* ========================================
+  BADGE
+======================================== */
+
+.badge{
+    @apply  bg-amber-300/80 text-black rounded-md text-xs py-0.5 px-1.5
+}
+.badge__warning{
+    @apply  bg-amber-300/80
+}
+.badge__light{
+    @apply  bg-gray-100
+}
+
+/* ========================================
+  CARROSEL
+======================================== */
+@keyframes brands-scroll {
+    from{
+        transform: translateX(0)
+    }
+    to{
+        transform: translateX(-50%)
+    }
+}
+
+.animate-brands-scroll{
+    animation: brands-scroll 25s linear infinite
 }
