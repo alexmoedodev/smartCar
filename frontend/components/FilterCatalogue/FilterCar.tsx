@@ -1,19 +1,27 @@
 "use client";
 
+import { titlteMessage } from "@/constants/messages/tittleMessage";
 import GroupFields from "../Layouts/GroupFields";
 import Input from "../ux/Input";
 import Select from "../ux/Select";
+import yearFabricationVehicle from "@/utils/yearFabricationVehicle";
+import { placeholderMessage } from "@/constants/messages/placeholderMessage";
+import { vehicleBrands } from "@/constants/vehicleBrands";
 
 
 /**
  * Componente responsável por renderizar o layout onde aplica os filtros e pegar os valores digitados
  * no input e selecionados no select para realizar o filtro de forma 
- * dinamamica do lado do ``client``
+ * dinamamica do lado do `client`
+ * 
  */
 const FilterCar = () => {
   return (
+    /** Containar principal  */
     <div className="flex flex-col w-full ">
-      <div className="flex flex-col w-full max-w-6xl mx-auto p-2 gap-6">
+
+      {/* Conteudo */}
+      <div className="flex flex-col w-full sm:max-w-6xl mx-auto px-6 gap-6">
 
         {/* Titulo  e subtitulo da seção. */}
         <div className="flex flex-col gap-1">
@@ -28,29 +36,42 @@ const FilterCar = () => {
         {/* Filtros */}
         <GroupFields>
           <Input
-            inputSize="lg"
-            title="Digite o nome do veiculo que deseja realizar a busca..."
-            placeholder={"Digite o nome do veiculo..."}
+            inputSize="full"
+            title={titlteMessage.search.nameVehicle}
+            placeholder={placeholderMessage.search.nameVehicle}
             value={""}
             onChange={() => { }}
           />
 
           <Select
-            title="Selecione a marca do veiculo que deseja realizar a busca..."
+            title={titlteMessage.search.markVehicle}
+            selectSize="fit"
             name=""
             value={""}
             onChange={() => { }}
           >
             <option>Selecione uma Marca</option>
+            {vehicleBrands.map((mark) => (
+              <option
+                key={mark.value}
+                value={mark.value}
+              >
+                {mark.label}
+              </option>
+            ))}
           </Select>
 
           <Select
-            title="Selecione o ano de fabricação do veiculo que deseja realizar a busca..."
+            title={titlteMessage.search.yearFabricationVehicle}
+            selectSize="fit"
             name=""
             value={""}
             onChange={() => { }}
           >
             <option>Ano de Fabricação</option>
+            {yearFabricationVehicle.map((year) => (
+              <option key={year}>{year}</option>
+            ))}
           </Select>
 
         </GroupFields>
