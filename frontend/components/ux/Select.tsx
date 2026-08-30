@@ -31,13 +31,13 @@ const Select = ({ label, htmlFor, selectSize = "fit", ...props }: Props) => {
     };
 
     return (
-        <div className={`${selectSize === "full" ? "w-full" : "w-auto"} flex flex-col gap-1`}>
+        <div className={`${selectSize === "full" ? "w-full" : "sm:w-auto"} flex flex-col gap-1`}>
             {label &&
                 <label htmlFor={htmlFor} className="text-sm text-gray">
                     {label}
                 </label>}
             <select
-                className={`${variantSize[selectSize]} rounded-lg border-0 bg-gray-100 py-1 px-2 sm:py-2 sm:px-3 cursor-pointer`}
+                className={`${variantSize[selectSize]} rounded-lg border-0 bg-gray-100 py-2 px-3 cursor-pointer placeholder:text-gray`}
                 {...props}>
             </select>
         </div>
