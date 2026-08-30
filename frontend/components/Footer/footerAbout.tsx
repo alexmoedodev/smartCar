@@ -15,7 +15,7 @@
  * `icon` - Ícone correspondente ao item de navegação.
  */
 
-import iconDefault from "@/constants/icons"
+import uiIcons from "@/constants/uiIcons"
 /**
  * Tamanho padrão do icone renderização.
  */
@@ -26,28 +26,28 @@ const footerAbout = [
         label: "Horários de Funcionamento",
         title: "Horários de funcionamento.",
         href: "/horarios-funcionamento-agencia",
-        icon: iconDefault.others.timer,
+        icon: uiIcons.others.timer,
         iconSize: iconSizeDefault
     },
     {
         label: "Contatos",
         title: "Número para contato.",
         href: "/contato-agencia",
-        icon: iconDefault.contact.phone,
+        icon: uiIcons.contact.phone,
         iconSize: iconSizeDefault
     },
     {
         label: "Localização",
         title: "Nossa localização.",
         href: "/localizacao-agencia",
-        icon: iconDefault.others.map,
+        icon: uiIcons.others.map,
         iconSize: iconSizeDefault
     },
     {
         label: "Sobre-nós",
         title: "Saiba mais sobre-nós.",
         href: "/sobre-nos-agencia",
-        icon: iconDefault.others.about,
+        icon: uiIcons.others.about,
         iconSize: iconSizeDefault
     },
 ]
