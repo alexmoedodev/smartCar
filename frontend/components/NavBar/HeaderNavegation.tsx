@@ -1,4 +1,4 @@
-import iconDefault from "@/constants/icons"
+import uiIcons from "@/constants/uiIcons"
 
 /**
  * Configuração dos itens de navegação exibidos no Header.
@@ -20,25 +20,25 @@ const headerNavigation = [
     {
         label: "Veiculos",
         title: "Explore nossos veicúlos.",
-        icon: iconDefault.vehicle.car,
+        icon: uiIcons.vehicle.car,
         sizeIcon: sizeIconDefault,
     },
     {
         label: "Contatos",
         title: "Nossos numero de contatos.",
-        icon: iconDefault.contact.phone,
+        icon: uiIcons.contact.phone,
         sizeIcon: sizeIconDefault,
     },
     {
         label: "Localização",
         title: "Nossa localização.",
-        icon: iconDefault.others.map,
+        icon: uiIcons.others.map,
         sizeIcon: sizeIconDefault,
     },
     {
         label: "Sobre-nós",
         title: "Click e saiba mais sobre nós",
-        icon: iconDefault.others.about,
+        icon: uiIcons.others.about,
         sizeIcon: sizeIconDefault,
     },
 ]
